@@ -18,8 +18,8 @@ def mapping():
 
 """
     Converts a given numeric code to old keypad text.
-    ^ Handles '*' to ignore all previous strokes 
-    
+    ^ Handles '*' to ignore all previous strokes
+
     Args: Numeric code input followed by a '#'
     Returns: Decoded text message as a string or Input Error
 """
@@ -81,4 +81,4 @@ def numericToText(num_code):
         result.append(decoded_char)
         sequences.append((current_digit, decoded_char))
 
-    return ''.join(result).upper()
+    return ''.join(result).replace(" ", "").upper()
